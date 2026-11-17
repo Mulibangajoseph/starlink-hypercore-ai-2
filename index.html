@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>STARLINK HYPERCORE AI</title>
+    <meta name="description" content="STARLINK HYPERCORE AI: one assistant for chat, coding, writing, image generation and document analysis across OpenAI, Claude, Gemini and DeepSeek." />
+    <meta name="application-name" content="STARLINK HYPERCORE AI" />
+    <meta name="theme-color" content="#050A14" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="STARLINK HYPERCORE AI" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="STARLINK HYPERCORE AI" />
+    <meta property="og:title" content="STARLINK HYPERCORE AI" />
+    <meta property="og:description" content="One assistant for chat, coding, writing, images and documents." />
+    <meta property="og:image" content="./icons/icon-512.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="STARLINK HYPERCORE AI" />
+    <meta name="twitter:description" content="One assistant for chat, coding, writing, images and documents." />
+    <meta name="twitter:image" content="./icons/icon-512.png" />
+    <meta name="format-detection" content="telephone=no" />
+    <style>
+      html, body { margin: 0; background: #050A14; }
+      .shc-boot {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+        box-sizing: border-box;
+        background: #050A14;
+        color: #E6F1FF;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      .shc-boot svg { width: 72px; height: 72px; animation: shc-pulse 2.4s ease-in-out infinite; }
+      .shc-boot-name {
+        margin: 0;
+        font-size: clamp(16px, 5vw, 24px);
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-align: center;
+        line-height: 1.2;
+      }
+      @keyframes shc-pulse {
+        0%, 100% { opacity: 0.75; transform: scale(0.96); }
+        50% { opacity: 1; transform: scale(1); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .shc-boot svg { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="shc-boot" role="status" aria-live="polite" aria-label="Loading STARLINK HYPERCORE AI">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="shc-g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#67E8F9" />
+              <stop offset="1" stop-color="#2563EB" />
+            </linearGradient>
+          </defs>
+          <path d="M32 4 L38.5 25.5 L60 32 L38.5 38.5 L32 60 L25.5 38.5 L4 32 L25.5 25.5 Z" fill="url(#shc-g)" />
+        </svg>
+        <p class="shc-boot-name">STARLINK HYPERCORE AI</p>
+      </div>
+    </div>
+    <noscript>STARLINK HYPERCORE AI needs JavaScript enabled to run.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

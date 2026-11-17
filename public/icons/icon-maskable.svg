@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="STARLINK HYPERCORE AI">
+  <defs>
+    <linearGradient id="g" x1="136" y1="136" x2="376" y2="376" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#050A14"/>
+  <g transform="translate(96 96) scale(10)">
+    <ellipse cx="16" cy="16" rx="14" ry="6" transform="rotate(-28 16 16)" fill="none" stroke="url(#g)" stroke-width="1.5" opacity="0.85"/>
+    <path d="M16 5C16.8 12 20 15.2 27 16C20 16.8 16.8 20 16 27C15.2 20 12 16.8 5 16C12 15.2 15.2 12 16 5Z" fill="url(#g)"/>
+  </g>
+</svg>

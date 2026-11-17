@@ -1,0 +1,86 @@
+{
+  "kind": "WEB",
+  "template": "vite-react",
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "connect": [
+    "api.openai.com",
+    "api.anthropic.com",
+    "generativelanguage.googleapis.com",
+    "api.deepseek.com"
+  ],
+  "secrets": {},
+  "server": {
+    "entry": "server/index.ts",
+    "db": false,
+    "rooms": false,
+    "cron": null
+  },
+  "env": [
+    {
+      "name": "OPENAI_API_KEY",
+      "secret": true,
+      "required": false,
+      "for": "OpenAI chat and image generation (paid by usage)",
+      "where": "platform.openai.com, API keys"
+    },
+    {
+      "name": "ANTHROPIC_API_KEY",
+      "secret": true,
+      "required": false,
+      "for": "Claude chat (paid by usage)",
+      "where": "console.anthropic.com, API keys"
+    },
+    {
+      "name": "GEMINI_API_KEY",
+      "secret": true,
+      "required": false,
+      "for": "Google Gemini chat (free tier, then paid)",
+      "where": "aistudio.google.com, API keys"
+    },
+    {
+      "name": "DEEPSEEK_API_KEY",
+      "secret": true,
+      "required": false,
+      "for": "DeepSeek chat (paid by usage, low cost)",
+      "where": "platform.deepseek.com, API keys"
+    },
+    {
+      "name": "AI_API_KEY",
+      "secret": true,
+      "required": false,
+      "for": "optional OpenAI-compatible fallback key for chat, coding, writing and image understanding",
+      "where": "Your AI provider's dashboard, API keys section"
+    },
+    {
+      "name": "AI_BASE_URL",
+      "secret": false,
+      "required": false,
+      "for": "OpenAI-compatible endpoint base URL for the fallback (defaults to https://api.openai.com/v1)",
+      "where": "Your AI provider's API docs"
+    },
+    {
+      "name": "AI_MODEL",
+      "secret": false,
+      "required": false,
+      "for": "model id used by the fallback provider",
+      "where": "Your AI provider's model list"
+    },
+    {
+      "name": "DAILY_LIMIT",
+      "secret": false,
+      "required": false,
+      "for": "requests allowed per device per day (default 100)",
+      "where": "Choose a number, for example 100"
+    },
+    {
+      "name": "VIDEO_API_KEY",
+      "secret": true,
+      "required": false,
+      "for": "future video-generation integration (not active in this version)",
+      "where": "A supported video provider's dashboard"
+    }
+  ]
+}
